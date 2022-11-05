@@ -26,7 +26,7 @@ public class LoadingProgress : MonoBehaviour
         while (!asyncOp.isDone)
         {
             image.fillAmount = asyncOp.progress;
-            text.text = "Loading... [" + (image.fillAmount * 100) + "%]";
+            text.text = "Loading... [" + (int)(image.fillAmount * 100) + "%]";
             yield return null;
         }
     }
